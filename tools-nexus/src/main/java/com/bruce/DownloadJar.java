@@ -24,23 +24,6 @@ public abstract class DownloadJar {
     // 待解析JSON文件路径
     private static final String JSON_FILE_PATH = "E:\\workspace\\workspace05\\tools-nexus\\src\\main\\resources\\nexus.json";
 
-    /**
-     * 启动任务
-     */
-    public static void main(String[] args) {
-        System.out.println("=============启动下载任务===========");
-        long startTime = System.currentTimeMillis();
-        try {
-            DownloadJar.downloadFile();
-        } catch (Exception e) {
-            System.out.println("==============出现异常==============");
-            e.printStackTrace();
-        }
-
-        System.out.println("==============下载任务结束，耗时：" + (System.currentTimeMillis() - startTime)  + "ms==========");
-
-    }
-
     public static void downloadFile() throws IOException {
         HashMap<String, Object> jsonMap = parseJson();
 
