@@ -1,17 +1,17 @@
-package com.bruce;
+import com.bruce.DownloadJarByUrl;
+import org.junit.Test;
 
 /**
  * @author Bruce
  * @create 2023/12/13
- * @description 主程序入口
+ * @description
  */
-public class Main {
-
-    public static void main(String[] args) {
+public class MainTest {
+    @Test
+    public void testDownloadJarByUrl () {
         System.out.println("=============启动下载任务===========");
         long startTime = System.currentTimeMillis();
         try {
-//            DownloadJar.downloadFile();
             String url = "http://127.0.0.1:8080";
             String repository = "test";
             String localPatch = "E:\\nexus_path\\test\\";
